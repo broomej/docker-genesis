@@ -4,6 +4,6 @@ FROM rocker/r-ver:4.5.1
 ENV PATH=/usr/local/lib/R/site-library/littler/examples/:${PATH}
 USER root
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y zlib1g-dev && \
+    apt-get install -y zlib1g-dev snakemake && \
     install2.r GGally BiocManager && \
     installBioc.r GENESIS
